@@ -5,17 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="banner">
+        <div class="banner-content">
+            Hard work and dedication is the only way to reach massive success! 💰💸 Your attitude and your drive are things in your control! 💵💎 I got money on my mind and mind on my money! 💰💪 Don't complain if you aint putting in the effort required! 💸💎
+            Hard work and dedication is the only way to reach massive success! 💰💸 Your attitude and your drive are things in your control! 💵💎 I got money on my mind and mind on my money! 💰💪 Don't complain if you aint putting in the effort required! 💸💎
+        </div>
+    </div>
+    <div class="focus-modal" id="focus-modal" style="display: none;">
+        <div class="focus-modal-content">
+            <div class="modal-header">
+                <span class="close-btn" id="close-focus">&times;</span>
+            </div>
+            <h2>What are you focusing on?</h2>
+            <input type="text" id="focus-input" placeholder="Enter your focus...">
+            <button id="confirm-focus">Start Focus Session</button>
+        </div>
+    </div>
+    <div class="reminder-container">
+        <button id="set-reminder">⏰ Set Reminder</button>
+        <div class="time-picker" id="time-picker" style="display: none;">
+            <div class="time-picker-header">
+                <span class="close-btn" id="close-picker">&times;</span>
+            </div>
+            <input type="time" id="reminder-time">
+            <button id="confirm-reminder">Set</button>
+        </div>
+    </div>
     <div class="container">
-        <h1>Pomodoro Timer</h1>
+        <div class="header">
+            <h1>Pomodoro Timer</h1>
+            <div class="mode-toggle">
+                <span id="toggle-mode" class="mode-icon">🌙</span>
+            </div>
+        </div>
+        <div class="focus-display" id="focus-display" style="display: none;">
+            <span class="focus-label">FOCUSING ON:</span>
+            <span class="focus-text" id="focus-text"></span>
+        </div>
         <div class="timer">
             <span id="minutes">25</span>:<span id="seconds">00</span>
         </div>
         <div class="controls">
             <button id="start">Start</button>
             <button id="reset">Reset</button>
-            <button id="toggle-mode">Switch to Break</button>
+            <button id="add-time">+5 Min</button>
         </div>
         <div class="mode">
             <span id="mode-text">Work Time</span>
